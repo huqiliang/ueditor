@@ -10,6 +10,7 @@
         "fdfs": "^1.0.4",
         "fs-extra": "^0.11.0",
         "node-fetch": "^1.7.3",
+        "node-ral": "^0.18.1",
         "node-snowflake": "0.0.1",
         "qn": "^1.3.0"
     },

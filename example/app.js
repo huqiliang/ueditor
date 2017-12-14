@@ -18,7 +18,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('.html', ejs.__express);
 app.set('view engine', 'html');
 
-app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function (req, res, next) {
+app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'),{api:true}, function (req, res, next) {
     //客户端上传文件设置
     var imgDir = '/img/ueditor/'
      var ActionType = req.query.action;

@@ -196,6 +196,27 @@ app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res
 
 ```
 
+
+
+### 上传到指定api
+
+```javascript
+1.api地址修改ral目录下的 config.js(host/port/path)
+
+2.修改config中api为true
+app.use("/ueditor/ue", static_url, config = {api:true}, callback);
+
+3.如果回复的url不在第一层级或者不叫url 修改lib/index对应部分
+
+res.json({
+  'url': results.url,
+  'title': req.body.pictitle,
+  'original': filename,
+  'state': 'SUCCESS'
+});
+```
+
+
 ### 上传配置
 ```javascript
 app.use("/ueditor/ue", static_url, config = {}, callback);
